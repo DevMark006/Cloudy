@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloudy Weather Tracker</title>
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body> 
+   <div class="search-container">  
+      <h1 id="title">Cloudy</h1>
+         <h4 id="desc">weather tracking site</h4>
+      <div class="search-input">
+         <input type="text" id="city-input" placeholder="City Name Ex. New York, London">
+      </div>
+      <div class="search-button">
+         <button type="button" id="search-btn" onclick="getWeather()">Search</button>
+      </div>
+   </div> 
+   <div class="weather">
+      <div class="location">
+         <h1 id="city"></h1>
+         <h1 id="country"></h1>
+      </div>
+      <h1 id="description"></h1>       
+      <h1 id="temp"></h1>
+      <img id="weather-img-x" src="">     
+      <div class="temperature">
+         <p id="temp-high"></p>
+         <p id="temp-low"></p>
+      </div>
+   </div>
+   <div class="sun-time">
+      <h1 class="rise">SUNRISE</h1>
+      <div class="sunrise">
+       <img src="Arrow up-right.png">
+       <p id="sunrise">0:00:00 --</p>
+      </div>
+      <h1 class="set">SUNSET</h1>
+      <div class="sunset">
+       <img src="Arrow down-left.png">
+       <p id="sunset">0:00:00 --</p>
+      </div>
+   </div>
+   <div class="weather-highlight">
+      <h1 class="header">Weather Highlight</h1>
+      <div class="highlights">
+        <div class="highlight-group">
+           <h1 class="heading">AIR QUALITY</h1>
+           <p id='AQI'>--</p><span>aqi</span>
+        </div>
+        <div class="highlight-group">
+           <h1 class="heading">WIND SPEED</h1>
+           <p id='speed'>--</p><span>m/s</span>
+        </div>
+        <div class="highlight-group">
+           <h1 class="heading">HUMIDITY</h1>
+           <p id='humidity'>--</p><span>%</span>
+        </div>
+        <div class="highlight-group">
+           <h1 class="heading">PRESSURE</h1>
+           <p id='pressure'>--</p><span>hPa</span>
+        </div>
+        <div class="highlight-group">
+           <h1 class="heading">VISIBILITY</h1>
+           <p id='visibility'>--</p><span>meter</span>
+        </div>
+        <div class="highlight-group">
+           <h1 class="heading">SEA LEVEL</h1>
+           <p id='sea-level'>--</p><span>AMSL</span>
+        </div>
+      </div>
+   </div>
+   <div class="weather-forecast">
+      <h1 class="header">Weather Forecast</h1>
+      <div class="forecast-container">
+          <div class="forecast">
+            <p id="time-one">--</p>
+            <img id="weather-img-one" src="">
+            <p id="weather-description-one">--</p>
+            <p id="temperature-one">--</p>
+          </div>
+          <div class="forecast">
+            <p id="time-two">--</p>
+            <img id="weather-img-two" src="">
+            <p id="weather-description-two">--</p>
+            <p id="temperature-two">--</p>
+          </div>
+          <div class="forecast">
+            <p id="time-three">--</p>
+            <img id="weather-img-three" src="">
+            <p id="weather-description-three">--</p>
+            <p id="temperature-three">--</p>
+          </div>
+          <div class="forecast">
+            <p id="time-four">--</p>
+            <img id="weather-img-four" src="">
+            <p id="weather-description-four">--</p>
+            <p id="temperature-four">--</p>
+          </div>
+          <div class="forecast">
+            <p id="time-five">--</p>
+            <img id="weather-img-five" src="">
+            <p id="weather-description-five">--</p>
+            <p id="temperature-five">--</p>
+          </div>
+          <div class="forecast">
+            <p id="time-six">--</p>
+            <img id="weather-img-six" src="">
+            <p id="weather-description-six">--</p>
+            <p id="temperature-six">--</p>
+          </div>
+          <div class="forecast">
+            <p id="time-seven">--</p>
+            <img id="weather-img-seven" src="">
+            <p id="weather-description-seven">--</p>
+            <p id="temperature-seven">--</p>
+          </div>
+      </div>
+   </div>
+   <script type="module" src="script.js"></script>
+</body>
+</html>

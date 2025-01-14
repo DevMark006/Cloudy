@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Unbounded:wght@200..900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: rgba(20, 21, 22, 1);
+    background-image: url(img.jpg);
+}
+.search-container {
+    background-color: rgba(20, 21, 22, 1);
+    height: 100vh;
+    width: 25vw;
+}
+#title {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    padding: 5rem 5rem 0rem 5rem;
+    text-align: center;
+}
+#desc {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    font-weight: 300;
+    font-size: 0.7rem;
+    padding: 0.4rem 5rem 1.2rem 5rem;
+}
+.search-input {
+    padding: 1rem 1rem 1rem 3rem;
+}
+#city-input {
+    background-color: rgba(30, 30, 30, 1);
+    font-family: 'Poppins', sans-serif;
+    border: none;
+    padding: 0.9rem 1rem 0.9rem 1rem;
+    border-radius: 20px;
+    width: 22rem;
+    color: white;
+}
+.search-button {
+    padding: 0.6rem 10rem 0rem 10rem;
+}
+#search-btn {
+    background-color: hsl(218, 36%, 13%);
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    border: none;
+    padding: 0.9rem 3rem 0.9rem 3rem;
+    border-radius: 20px;
+    cursor: pointer;
+}
+#search-btn:hover {
+    background-color: hsl(218, 36%, 20%);
+}
+/*City Time*/
+.city-time {
+    position: absolute;
+    bottom: 875px;
+    left: 550px;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    font-size: 0.6rem;
+}
+/*Weather*/
+.weather {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    position: absolute;
+    bottom: 650px;
+    left: 550px;
+}
+#city {
+    margin-right: 0.9rem;
+}
+.location {
+    display:flex;
+}
+#description {
+    font-size: 0.9rem;
+    margin-top: 9px;
+}
+#weather-img-x {
+    position: absolute;
+    margin-left: 17rem;
+    bottom: 0.5rem;
+    height: auto;
+    width: 15rem;
+}
+#temp {
+    margin-top: 5px;
+    font-size: 3.5rem;
+}
+.temperature {
+    display: flex;
+    margin-top: 5px;
+}
+#temp-high {
+    margin-right: 1rem; 
+}
+/*Sun-time*/
+.sun-time {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    position: absolute;
+    bottom: 600px;
+    left: 1400px;
+    display: flex;
+    background-color: rgba(20, 21, 22, 1);
+    border-radius: 20px;
+    padding: 3rem 1.5rem 9rem 1.5rem;
+    width: 20rem;
+    opacity: 0.8;
+}
+.sunrise {
+    position: absolute;
+    top: 95px;
+    left: 60px;
+    text-align: center;
+}
+.sunset {
+    position: absolute;
+    top: 95px;
+    left: 220px;
+    text-align: center;
+}
+.set {
+    margin-left: 2.4rem;
+    font-size: 0.9rem;
+    padding: 0rem 2rem 2rem 2rem;
+}
+.rise {
+    margin-left: 0.8rem;
+    font-size: 0.9rem;
+    padding: 0rem 2rem 2rem 2rem;
+}
+/*Weather Highlight*/
+.weather-highlight {
+    position: absolute;
+    bottom: 370px;
+    left: 550px;
+    color: white;  
+}
+.header {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    color: white;
+}
+.highlights {
+    display: flex;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 25px;
+}
+.heading {
+    font-size: 0.9rem;
+}
+.highlight-group {
+    background-color: rgba(20, 21, 22, 1);
+    margin-right: 3.5rem;
+    padding: 1.2rem 4rem 1.5rem 1rem;
+    border-radius: 20px;
+    opacity: 0.8;
+}
+#AQI,
+#speed,
+#humidity,
+#pressure,
+#visibility,
+#sea-level{
+    font-family: 'Poppins', sans-serif;
+    padding: 0rem;
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+/*Weather Forecast*/
+.weather-forecast {
+    position: absolute;
+    left: 556px;
+    bottom: 30px;
+}
+.forecast-container {
+    background-color: rgba(20, 21, 22, 1);
+    border-radius: 20px;
+    margin-top: 1rem;
+    padding: 0rem 2.5rem 0rem 0rem;
+    opacity: 0.8;
+    display: flex;
+}
+.forecast {
+    width: 8rem;
+    padding: 2rem 0.5rem 2rem 2rem; 
+}
+#time-one,
+#time-two,
+#time-three,
+#time-four,
+#time-five, 
+#time-six,
+#time-seven {
+    color: white;
+    font-family: 'Poppins', sans-serif;  
+    text-align: center;
+}
+#temperature-one,
+#temperature-two,
+#temperature-three,
+#temperature-four,
+#temperature-five,
+#temperature-six, 
+#temperature-seven{
+    color: white;
+    font-family: 'Poppins', sans-serif; 
+    text-align: center;
+}
+#weather-description-one,
+#weather-description-two,
+#weather-description-three,
+#weather-description-four,
+#weather-description-five,
+#weather-description-six,
+#weather-description-seven {
+    color: white;
+    font-family: 'Poppins', sans-serif; 
+    text-align: center;   
+}
+#weather-img-one,
+#weather-img-two,
+#weather-img-three,
+#weather-img-four,
+#weather-img-five,
+#weather-img-six,
+#weather-img-seven {
+    height: auto;
+    width: 90px;
+    padding-left: 1.2rem;
+}
