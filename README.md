@@ -16,7 +16,7 @@ It has a user-friendly design that gives essential weather data such as weather 
 <p>• User Friendly Design</p>
 
 # Limitations
-This project uses a free weather api from openweathermap which has an api call limits. 
+This project uses a free plan weather api from openweathermap which has an api call limits. 
 
 # Technologies Used
 <div align="center">
