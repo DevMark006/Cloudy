@@ -7,13 +7,13 @@ Cloudy is a simple and compact weather forecast site enables you to track weathe
 It has a user-friendly design that gives essential weather data such as weather detail, wind speed, temperature and 3 hours 5 days forecast.
 
 # Features
-<p>• Search Cities and Country around the world</p>
-<p>• Suntime provide about sunrise and sunset</p>
-<p>• Display current weather and temperature</p>
-<p>• Highlights essential weather details (Air Quality, Windspeed, Humidity, Pressure, Visibility, Sea Level</p>
-<p>• 3 hours 5 days weather forecast gives essential weather details</p>
-<p>• Switch Celcius to Fahrenheit</p>
-<p>• User Friendly Design</p>
+<p>• Search Cities and Country around the world.</p>
+<p>• Suntime provide about sunrise and sunset.</p>
+<p>• Display current weather and temperature.</p>
+<p>• Highlights essential weather details (Air Quality, Windspeed, Humidity, Pressure, Visibility, Sea Level).</p>
+<p>• 3 hours 5 days weather forecast gives essential weather details.</p>
+<p>• Switch Celcius to Fahrenheit.</p>
+<p>• User Friendly Design.</p>
 
 # Limitations
 This project uses a free plan weather api from openweathermap which has an api call limits. 
