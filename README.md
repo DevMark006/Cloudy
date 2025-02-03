@@ -15,6 +15,9 @@ It has a user-friendly design that gives essential weather data such as weather 
 <p>• Switch Celcius to Fahrenheit</p>
 <p>• User Friendly Design</p>
 
+# Limitations
+This project uses a free weather api from openweathermap which has an api call limits. 
+
 # Technologies Used
 <div align="center">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="70" alt="javascript logo"/>
