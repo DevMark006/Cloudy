@@ -6,16 +6,16 @@
     <title>Cloudy</title>
     <link rel="stylesheet" href="styles.css"> 
     <link rel="icon" type="image/x-icon" href="favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
    </head>
 <body> 
    <div class="search-container">  
-      <h1 id="title">Cloudy</h1>
-         <h4 id="desc">Weather Forecast Site</h4>
+      <img src="banner-logo.png" id="logo" alt="cloudy-banner-logo">
       <div class="search-input">
-         <input type="text" id="city-input" placeholder="City Name Ex. New York, London">
-      </div>
-      <div class="search-button">
-         <button type="button" id="search-btn" onclick="getWeather()">Search</button>
+         <input type="text" id="city-input" placeholder="Ex. New York, London">
+         <button type="button" id="search-btn" onclick="getWeather()"><i class="fa-solid fa-magnifying-glass"></i></button>
+         <button type="button" id="current-location-btn" onclick="getWeatherByLocation()"><i class="fa-solid fa-location-dot"></i></button>
       </div>
    </div> 
    <div class="weather">

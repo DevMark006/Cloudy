@@ -6,6 +6,8 @@ async function getWeather() {
     const city = document.getElementById('city-input').value.trim();
 
     try {
+        let lat, lon;
+
         if (!city) {
             throw new Error('Please enter a city name');
         }
@@ -15,9 +17,17 @@ async function getWeather() {
 
         if (!weatherData || weatherData.cod !== 200) {
             throw new Error('City not found');
+        } else {
+            lat = weatherData.coord.lat;
+            lon = weatherData.coord.lon;
         }
 
-        const { lat, lon } = weatherData.coord;
+        // **If city is not provided, get user location**
+        if (!lat || !lon) {
+            const location = await getWeatherByLocation();
+            lat = location.lat;
+            lon = location.lon;
+        }
 
         // Fetch weather details
         const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
@@ -40,6 +50,27 @@ async function getWeather() {
     } catch (error) {
         document.getElementById('weather').innerText = error.message;
     }
+}
+
+// Get weather details based on current location
+function getWeatherByLocation() {
+    return new Promise((resolve, reject) => {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(
+                (position) => {
+                    resolve({
+                        lat: position.coords.latitude,
+                        lon: position.coords.longitude,
+                    });
+                },
+                (error) => {
+                    reject(new Error('Unable to retrieve your location'));
+                }
+            );
+        } else {
+            reject(new Error('Geolocation is not supported by your browser'));
+        }
+    });
 }
 
 // Display weather details
@@ -84,13 +115,13 @@ function displayWeather(weather, airData, forecast) {
     const windSpeed = document.getElementById('speed');
     const humidity = document.getElementById('humidity');
     const pressure = document.getElementById('pressure');
-    const viss = document.getElementById('visibility');
+    const visibility = document.getElementById('visibility');
     const seaLevel = document.getElementById('sea-level');
 
     windSpeed.innerText = `${weather.wind.speed} m/s`;
     humidity.innerText = `${weather.main.humidity}%`;
     pressure.innerText = `${weather.main.pressure} hPa`;
-    viss.innerText = `${weather.visibility / 1000} km`;
+    visibility.innerText = `${weather.visibility / 1000} km`;
     seaLevel.innerText = weather.main.sea_level
         ? `${weather.main.sea_level} hPa`
         : 'N/A';
@@ -116,8 +147,7 @@ function displayWeather(weather, airData, forecast) {
 
         const forecastData = forecast.list[index];
         if (forecastData) {
-            const { description: descText, icon } =
-                forecastData.weather[0];
+            const { description: descText, icon } = forecastData.weather[0];
             const { temp: forecastTemp } = forecastData.main;
             const { dt_txt: forecastTimeText } = forecastData;
 
@@ -131,4 +161,9 @@ function displayWeather(weather, airData, forecast) {
 
 // Event listener for the search button
 document.getElementById('search-btn').addEventListener('click', getWeather);
- 
+
+// Event listener for the "Get Weather by Location" button
+document.getElementById('current-location-btn').addEventListener('click', async () => {
+    const location = await getWeatherByLocation();
+    getWeather(location.lat, location.lon);
+});
