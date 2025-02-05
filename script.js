@@ -2,7 +2,7 @@ import API_KEY from './config.js';
 
 // Get weather details
 async function getWeather() {
-    const apiKey = API_KEY; // Use the imported API key
+    const apiKey = API_KEY; 
     const city = document.getElementById('city-input').value.trim();
 
     try {
@@ -22,7 +22,7 @@ async function getWeather() {
             lon = weatherData.coord.lon;
         }
 
-        // **If city is not provided, get user location**
+        // If city is not provided, get user location
         if (!lat || !lon) {
             const location = await getWeatherByLocation();
             lat = location.lat;
@@ -76,7 +76,6 @@ function getWeatherByLocation() {
 // Display weather details
 function displayWeather(weather, airData, forecast) {
     const city = document.getElementById('city');
-    const country = document.getElementById('country');
     const description = document.getElementById('description');
     const weatherImg = document.getElementById('weather-img-x');
     const temperature = document.getElementById('temp');
@@ -94,9 +93,8 @@ function displayWeather(weather, airData, forecast) {
 
     const iconUrl = `https://openweathermap.org/img/wn/${iconCode}@4x.png`;
     weatherImg.src = iconUrl;
-
-    city.innerText = cityName;
-    country.innerText = countryAbbr;
+    
+    city.innerText = cityName + ", " + countryAbbr;
     description.innerText = weatherDesc;
     temperature.innerText = `${temp} °C`;
     tempHigh.innerText = `${highTemp} °C`;
@@ -162,7 +160,7 @@ function displayWeather(weather, airData, forecast) {
 // Event listener for the search button
 document.getElementById('search-btn').addEventListener('click', getWeather);
 
-// Event listener for the "Get Weather by Location" button
+// Event listener for the get user location button
 document.getElementById('current-location-btn').addEventListener('click', async () => {
     const location = await getWeatherByLocation();
     getWeather(location.lat, location.lon);

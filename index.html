@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles.css"> 
     <link rel="icon" type="image/x-icon" href="favicon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 </head>
    </head>
 <body> 
@@ -21,7 +22,6 @@
    <div class="weather">
       <div class="location">
          <h1 id="city"></h1>
-         <h1 id="country"></h1>
       </div>
       <h1 id="description"></h1>       
       <h1 id="temp"></h1>
@@ -32,14 +32,12 @@
       </div>
    </div>
    <div class="sun-time">
-      <h1 class="rise">SUNRISE</h1>
       <div class="sunrise">
-       <img src="Arrow up-right.png">
+       <i class="bi bi-sunrise-fill large-icon" style="font-size: 60px;"></i>
        <p id="sunrise">0:00:00 --</p>
       </div>
-      <h1 class="set">SUNSET</h1>
       <div class="sunset">
-       <img src="Arrow down-left.png">
+       <i class="bi bi-sunset-fill" style="font-size: 60px;"></i>
        <p id="sunset">0:00:00 --</p>
       </div>
    </div>
@@ -48,27 +46,27 @@
       <div class="highlights">
         <div class="highlight-group">
            <h1 class="heading">AIR QUALITY</h1>
-           <p id='AQI'>--</p><span>aqi</span>
+           <p id='AQI'>--</p>
         </div>
         <div class="highlight-group">
            <h1 class="heading">WIND SPEED</h1>
-           <p id='speed'>--</p><span>m/s</span>
+           <p id='speed'>--</p>
         </div>
         <div class="highlight-group">
            <h1 class="heading">HUMIDITY</h1>
-           <p id='humidity'>--</p><span>%</span>
+           <p id='humidity'>--</p>
         </div>
         <div class="highlight-group">
            <h1 class="heading">PRESSURE</h1>
-           <p id='pressure'>--</p><span>hPa</span>
+           <p id='pressure'>--</p>
         </div>
         <div class="highlight-group">
            <h1 class="heading">VISIBILITY</h1>
-           <p id='visibility'>--</p><span>meter</span>
+           <p id='visibility'>--</p>
         </div>
         <div class="highlight-group">
            <h1 class="heading">SEA LEVEL</h1>
-           <p id='sea-level'>--</p><span>AMSL</span>
+           <p id='sea-level'>--</p>
         </div>
       </div>
    </div>
