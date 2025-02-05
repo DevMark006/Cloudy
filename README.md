@@ -12,7 +12,6 @@ It has a user-friendly design that gives essential weather data such as weather 
 <p>• Display current weather and temperature.</p>
 <p>• Highlights essential weather details (Air Quality, Windspeed, Humidity, Pressure, Visibility, Sea Level).</p>
 <p>• 3 hours 5 days weather forecast gives essential weather details.</p>
-<p>• Switch Celcius to Fahrenheit.</p>
 <p>• User Friendly Design.</p>
 
 # Limitations
