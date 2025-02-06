@@ -13,7 +13,7 @@ It has a user-friendly design that gives essential weather data such as weather 
 <p>• Highlights essential weather details (Air Quality, Windspeed, Humidity, Pressure, Visibility, Sea Level).</p>
 <p>• 3 hours 5 days weather forecast gives essential weather details.</p>
 <p>• Use current location to provide weather data.</p>
-<p>• User Friendly Desig.</p>
+<p>• User Friendly Design.</p>
 
 # Limitations
 This project uses a free plan weather api from openweathermap which has an api call limits. 
