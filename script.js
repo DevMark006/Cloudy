@@ -1,4 +1,4 @@
-import API_KEY from './config.js';
+import { API_KEY } from './config.js';
 
 // Get weather details
 async function getWeather() {
